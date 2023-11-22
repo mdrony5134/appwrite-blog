@@ -4,8 +4,10 @@ import { useEffect, useState } from "react"
 import AllPostBanner from "../AllPostBanner"
 const AllPosts = () => {
     const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(()=>{},[])
     appwriteService.getPosts([]).then((posts)=>{
+        setLoading(false)
         if(posts){
             setPosts(posts.documents)
         }
@@ -13,7 +15,10 @@ const AllPosts = () => {
   return (
   <div>
     <AllPostBanner/>
-    <div className="w-full py-8">
+    {loading ? (
+         <div className="py-48 text-center text-2xl">loading...</div>
+    ) : (
+        <div className="w-full py-8">
         <Container>
             <div className="flex flex-wrap">
                 {posts.map((post)=>(
@@ -24,6 +29,7 @@ const AllPosts = () => {
             </div>
         </Container>
     </div>
+    )}
   </div>
   )
 }

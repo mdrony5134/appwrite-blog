@@ -15,9 +15,7 @@ const Home = () => {
     });
   }, []);
 
-  if (posts.length === 0) {
-    return <Banner />;
-  } else {
+  if (posts?.length > 0) {
     return (
       <>
         <AuthBanner />
@@ -35,6 +33,8 @@ const Home = () => {
         </div>
       </>
     );
+  } else {
+    return <Banner />;
   }
 };
 

@@ -34,7 +34,7 @@ const Header = () => {
     },
   ]
   return (
-    <header className="bg-gray-300 shadow-sm fixed top-0 left-0 right-0">
+    <header className="bg-gray-300 shadow-sm fixed top-0 left-0 right-0 z-50">
       <Container>
         <nav className="px-4 py-4  max-w-7xl mx-auto flex justify-between items-center">
           <div>
