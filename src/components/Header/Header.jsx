@@ -39,7 +39,7 @@ const Header = () => {
         <nav className="px-4 py-4  max-w-7xl mx-auto flex justify-between items-center">
           <div>
           <Link to={"/"} className="text-xl font-bold flex items-center gap-2">
-           <img src="/public/blog.png" className="w-[7%] h-[7%]" alt="" />
+           <img src="/blog.png" className="w-[7%] h-[7%]" alt="" />
             .<span className="text-orange-600">blog</span>
           </Link> 
           </div>
