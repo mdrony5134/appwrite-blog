@@ -10,7 +10,7 @@ const AuthBanner = () => {
         <Link to={"/add-post"} className='inline-flex items-center gap-2 hover:text-orange-600'>Read and Post your blog <FaArrowRightLong className='mt-2'/></Link>
     </div>
     <div className="lg:max-w-[841px]">
-      <img src="../../public/blog-writer.png"  className="w-full"/>
+      <img src="/blog-writer.png"  className="w-full"/>
     </div>
 </div>
   )
