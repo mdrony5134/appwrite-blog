@@ -1,10 +1,9 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, NavLink} from "react-router-dom"
 import {Container, LogoutBtn} from "../index"
 import { useSelector } from "react-redux"
 
 const Header = () => {
   const authStatus = useSelector((state)=>state.auth.status)
-  const navigate = useNavigate()
 
   const navItems = [
     {
@@ -48,14 +47,11 @@ const Header = () => {
               navItems.map((item, index)=>(
                 item.active ? (
                   <li key={index}>
-                    <button  
-                     className={({ isActive }) =>
-                     isActive? "active" : ""  
-                   }
-                    onClick={()=>navigate(item.path)}
+                    <NavLink  
+                    to={item.path}
                     >
                       {item.link}
-                    </button>
+                    </NavLink>
                   </li>
                 ) : null
               ))

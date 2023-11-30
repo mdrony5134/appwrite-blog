@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   if (posts?.length > 0) {
-    return (
+     return (
       <>
         <AuthBanner />
         <div className="w-full">
@@ -35,6 +35,7 @@ const Home = () => {
     );
   } else {
     return <Banner />;
+   
   }
 };
 
